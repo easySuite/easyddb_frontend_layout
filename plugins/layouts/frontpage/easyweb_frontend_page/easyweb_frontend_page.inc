@@ -1,7 +1,7 @@
 <?php
 
 $plugin['easyweb_frontend_page'] = array(
-    'title' => t('Frontend easyweb page'),
+    'title' => t('easyDDB default layout'),
     'category'  => 'Ding2, theme',
     'icon' => 'easyweb_frontend_page.png',
     'theme' => 'easyweb_frontend_page',
