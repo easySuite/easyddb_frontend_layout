@@ -1,0 +1,8 @@
+<?php
+
+/*
+* Implements hook_ctools_plugin_directory().
+*/
+function easyddb_frontend_layout_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
