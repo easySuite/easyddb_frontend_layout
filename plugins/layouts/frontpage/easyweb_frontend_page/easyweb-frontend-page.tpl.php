@@ -66,7 +66,7 @@
           <?php print $content['r_5_33_3']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <div class="layout-wrapper">
@@ -82,9 +82,9 @@
           <?php print $content['r_6_25_2']; ?>
         </div>
       <?php endif ?>
-	</div>
-	
-	<div class="col6 right layout-wrapper">
+    </div>
+    
+    <div class="col6 right layout-wrapper">
       <?php if (!empty($content['r_6_25_3'])): ?>
         <div class="col col6">
           <?php print $content['r_6_25_3']; ?>
@@ -96,7 +96,7 @@
           <?php print $content['r_6_25_4']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
 
   <?php if (!empty($content['r_1_100'])): ?>
@@ -165,7 +165,7 @@
           <?php print $content['r_11_33_3']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <div class="layout-wrapper">
@@ -181,9 +181,9 @@
           <?php print $content['r_12_25_2']; ?>
         </div>
       <?php endif ?>
-	</div>
-	
-	<div class="col6 right">
+    </div>
+    
+    <div class="col6 right">
       <?php if (!empty($content['r_12_25_3'])): ?>
         <div class="col col6">
           <?php print $content['r_12_25_3']; ?>
@@ -195,7 +195,7 @@
           <?php print $content['r_12_25_4']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <?php if (!empty($content['r_13_100'])): ?>
@@ -264,7 +264,7 @@
           <?php print $content['r_17_33_3']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <div class="layout-wrapper">
@@ -280,9 +280,9 @@
           <?php print $content['r_18_25_2']; ?>
         </div>
       <?php endif ?>
-	</div>
-	
-	<div class="col6 right">
+    </div>
+    
+    <div class="col6 right">
       <?php if (!empty($content['r_18_25_3'])): ?>
         <div class="col col6">
           <?php print $content['r_18_25_3']; ?>
@@ -294,7 +294,7 @@
           <?php print $content['r_18_25_4']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <?php if (!empty($content['r_19_100'])): ?>
@@ -363,7 +363,7 @@
           <?php print $content['r_23_33_3']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
   
   <div class="layout-wrapper">
@@ -379,9 +379,9 @@
           <?php print $content['r_24_25_2']; ?>
         </div>
       <?php endif ?>
-	</div>
-	
-	<div class="col6 right">
+    </div>
+    
+    <div class="col6 right">
       <?php if (!empty($content['r_24_25_3'])): ?>
         <div class="col col6">
           <?php print $content['r_24_25_3']; ?>
@@ -393,7 +393,7 @@
           <?php print $content['r_24_25_4']; ?>
         </div>
       <?php endif ?>
-	</div>
+    </div>
   </div>
  
 </div>
