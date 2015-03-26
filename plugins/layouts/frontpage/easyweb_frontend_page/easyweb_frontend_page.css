@@ -1,0 +1,61 @@
+.page-admin .col3 {
+  width: 25%;
+  float: left;
+}
+
+.page-admin .col4 {
+  width: 33.33333333%;
+  float: left;
+}
+
+.page-admin .col6 {
+  width: 50%;
+  float: left;
+}
+
+.page-admin .col7 {
+  width: 58.33333333%;
+  float: left;
+}
+
+.page-admin .col8 {
+  width: 66.66666667%;
+  float: left;
+}
+
+.page-admin .col9 {
+  width: 75%;
+  float: left;
+}
+
+.page-admin .col8 .col6,
+.page-admin .col6 .col6 {
+  width: 50%;
+}
+
+.page-admin .col {
+  margin-bottom: 10px;
+}
+
+.page-admin .col .label {
+  padding-top: 5px;
+}
+
+.page-admin .layout-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.page-admin .layout-wrapper > div {
+  display: table-cell;
+}
+
+.page-admin .layout-wrapper:before,
+.page-admin .layout-wrapper:after {
+  display: table;
+  content: " ";
+}
+
+.page-admin .form-actions {
+  clear: both;
+}
