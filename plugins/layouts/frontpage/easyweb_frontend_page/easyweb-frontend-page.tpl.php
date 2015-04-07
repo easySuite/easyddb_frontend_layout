@@ -1,399 +1,325 @@
 <div <?php if (!empty($css_id)) { print ' id="$css_id"'; } ?> class="frontpage-layout">
 
-  <?php if (!empty($content['r_1_100'])): ?>
-    <div class="col col12">
-      <?php print $content['r_1_100']; ?>
-    </div>
-  <?php endif ?>
+  <div class="col12">
+    <div class="col12"><?php print $content['s1_r_01_100']; ?></div>
+  </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_2_25'])): ?>
-      <div class="col col3">
-        <?php print $content['r_2_25']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s1_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s1_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s1_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s1_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s1_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s1_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s1_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s1_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_06_025']; ?></div>
+  </div>
 
-    <?php if (!empty($content['r_2_75'])): ?>
-      <div class="col col9 right">
-        <?php print $content['r_2_75']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s1_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s1_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s1_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s1_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s1_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s1_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s1_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s1_r_10_050']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s1_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s1_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_11_025_4']; ?></div>
   </div>
 
   <div class="layout-wrapper">
-    <?php if (!empty($content['r_3_75'])): ?>
-      <div class="col col9">
-        <?php print $content['r_3_75']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_3_25'])): ?>
-      <div class="col col3 right">
-        <?php print $content['r_3_25']; ?>
-      </div>
-    <?php endif ?>
-  </div>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_4_50_1'])): ?>
-      <div class="col col6">
-        <?php print $content['r_4_50_1']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_4_50_2'])): ?>
-      <div class="col col6 right">
-        <?php print $content['r_4_50_2']; ?>
-      </div>
-    <?php endif ?>
-  </div>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_5_33_1'])): ?>
-      <div class="col col4">
-        <?php print $content['r_5_33_1']; ?>
-      </div>
-    <?php endif ?>
-    <div class="col8 right layout-wrapper">
-      <?php if (!empty($content['r_5_33_2'])): ?>
-        <div class="col6">
-          <?php print $content['r_5_33_2']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_5_33_3'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_5_33_3']; ?>
-        </div>
-      <?php endif ?>
-    </div>
-  </div>
-
-  <div class="layout-wrapper">
-    <div class="col6 layout-wrapper">
-      <?php if (!empty($content['r_6_25_1'])): ?>
-        <div class="col col6">
-          <?php print $content['r_6_25_1']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_6_25_2'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_6_25_2']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12">
+      <div class="col12"><?php print $content['s2_r_01_100']; ?></div>
     </div>
 
-    <div class="col6 right layout-wrapper">
-      <?php if (!empty($content['r_6_25_3'])): ?>
-        <div class="col col6">
-          <?php print $content['r_6_25_3']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_6_25_4'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_6_25_4']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s2_r_02_075']; ?></div>
     </div>
-  </div>
-
-  <?php if (!empty($content['r_1_100'])): ?>
-    <div class="col col12">
-      <?php print $content['r_7_100']; ?>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s2_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s2_r_03_066']; ?></div>
     </div>
-  <?php endif ?>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s2_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s2_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s2_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s2_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s2_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_06_025']; ?></div>
+    </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_8_25'])): ?>
-      <div class="col col3">
-        <?php print $content['r_8_25']; ?>
-      </div>
-    <?php endif ?>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s2_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s2_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s2_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s2_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s2_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s2_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s2_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s2_r_10_050']; ?></div>
+    </div>
 
-    <?php if (!empty($content['r_8_75'])): ?>
-      <div class="col col9 right">
-        <?php print $content['r_8_75']; ?>
-      </div>
-    <?php endif ?>
-  </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s2_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s2_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_11_025_4']; ?></div>
+    </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_9_75'])): ?>
-      <div class="col col9">
-        <?php print $content['r_9_75']; ?>
-      </div>
-    <?php endif ?>
+    <div class="col12">
+      <div class="col12"><?php print $content['s3_r_01_100']; ?></div>
+    </div>
 
-    <?php if (!empty($content['r_9_25'])): ?>
-      <div class="col col3 right">
-        <?php print $content['r_9_25']; ?>
-      </div>
-    <?php endif ?>
-  </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s3_r_02_075']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s3_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s3_r_03_066']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s3_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s3_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s3_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s3_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s3_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_06_025']; ?></div>
+    </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_10_50_1'])): ?>
-      <div class="col col6">
-        <?php print $content['r_10_50_1']; ?>
-      </div>
-    <?php endif ?>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s3_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s3_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s3_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s3_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s3_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s3_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s3_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s3_r_10_050']; ?></div>
+    </div>
 
-    <?php if (!empty($content['r_10_50_2'])): ?>
-      <div class="col col6 right">
-        <?php print $content['r_10_50_2']; ?>
-      </div>
-    <?php endif ?>
-  </div>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_11_33_1'])): ?>
-      <div class="col col4">
-        <?php print $content['r_11_33_1']; ?>
-      </div>
-    <?php endif ?>
-    <div class="col8 right">
-      <?php if (!empty($content['r_11_33_2'])): ?>
-        <div class="col6">
-          <?php print $content['r_11_33_2']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_11_33_3'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_11_33_3']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s3_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s3_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_11_025_4']; ?></div>
     </div>
   </div>
 
-  <div class="layout-wrapper">
-    <div class="col6">
-      <?php if (!empty($content['r_12_25_1'])): ?>
-        <div class="col col6">
-          <?php print $content['r_12_25_1']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_12_25_2'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_12_25_2']; ?>
-        </div>
-      <?php endif ?>
-    </div>
-
-    <div class="col6 right">
-      <?php if (!empty($content['r_12_25_3'])): ?>
-        <div class="col col6">
-          <?php print $content['r_12_25_3']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_12_25_4'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_12_25_4']; ?>
-        </div>
-      <?php endif ?>
-    </div>
+  <div class="col12">
+    <div class="col12"><?php print $content['s4_r_01_100']; ?></div>
   </div>
 
-  <?php if (!empty($content['r_13_100'])): ?>
-    <div class="col col12">
-      <?php print $content['r_13_100']; ?>
-    </div>
-  <?php endif ?>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_14_25'])): ?>
-      <div class="col col3">
-        <?php print $content['r_14_25']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_14_75'])): ?>
-      <div class="col col9 right">
-        <?php print $content['r_14_75']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s4_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s4_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s4_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s4_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s4_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s4_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s4_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s4_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_06_025']; ?></div>
   </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_15_75'])): ?>
-      <div class="col col9">
-        <?php print $content['r_15_75']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s4_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s4_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s4_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s4_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s4_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s4_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s4_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s4_r_10_050']; ?></div>
+  </div>
 
-    <?php if (!empty($content['r_15_25'])): ?>
-      <div class="col col3 right">
-        <?php print $content['r_15_25']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s4_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s4_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_11_025_4']; ?></div>
   </div>
 
   <div class="layout-wrapper">
-    <?php if (!empty($content['r_16_50_1'])): ?>
-      <div class="col col6">
-        <?php print $content['r_16_50_1']; ?>
-      </div>
-    <?php endif ?>
+    <div class="col12">
+      <div class="col12"><?php print $content['s5_r_01_100']; ?></div>
+    </div>
 
-    <?php if (!empty($content['r_16_50_2'])): ?>
-      <div class="col col6 right">
-        <?php print $content['r_16_50_2']; ?>
-      </div>
-    <?php endif ?>
-  </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s5_r_02_075']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s5_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s5_r_03_066']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s5_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s5_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s5_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s5_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s5_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_06_025']; ?></div>
+    </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_17_33_1'])): ?>
-      <div class="col col4">
-        <?php print $content['r_17_33_1']; ?>
-      </div>
-    <?php endif ?>
-    <div class="col8 right">
-      <?php if (!empty($content['r_17_33_2'])): ?>
-        <div class="col col6">
-          <?php print $content['r_17_33_2']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s5_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s5_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s5_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s5_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s5_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s5_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s5_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s5_r_10_050']; ?></div>
+    </div>
 
-      <?php if (!empty($content['r_17_33_3'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_17_33_3']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s5_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s5_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_11_025_4']; ?></div>
     </div>
   </div>
 
-  <div class="layout-wrapper">
-    <div class="col6">
-      <?php if (!empty($content['r_18_25_1'])): ?>
-        <div class="col col6">
-          <?php print $content['r_18_25_1']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_18_25_2'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_18_25_2']; ?>
-        </div>
-      <?php endif ?>
-    </div>
-
-    <div class="col6 right">
-      <?php if (!empty($content['r_18_25_3'])): ?>
-        <div class="col col6">
-          <?php print $content['r_18_25_3']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_18_25_4'])): ?>
-        <div class="col6 right">
-          <?php print $content['r_18_25_4']; ?>
-        </div>
-      <?php endif ?>
-    </div>
+  <div class="col12">
+    <div class="col12"><?php print $content['s6_r_01_100']; ?></div>
   </div>
 
-  <?php if (!empty($content['r_19_100'])): ?>
-    <div class="col col12">
-      <?php print $content['r_19_100']; ?>
-    </div>
-  <?php endif ?>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_20_25'])): ?>
-      <div class="col col3">
-        <?php print $content['r_20_25']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_20_75'])): ?>
-      <div class="col col9 right">
-        <?php print $content['r_20_75']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s6_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s6_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s6_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s6_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s6_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s6_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s6_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s6_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_06_025']; ?></div>
   </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_21_75'])): ?>
-      <div class="col col9">
-        <?php print $content['r_21_75']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_21_25'])): ?>
-      <div class="col col3 right">
-        <?php print $content['r_21_25']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s6_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s6_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s6_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s6_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s6_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s6_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s6_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s6_r_10_050']; ?></div>
   </div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_22_50_1'])): ?>
-      <div class="col col6">
-        <?php print $content['r_22_50_1']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['r_22_50_2'])): ?>
-      <div class="col col6 right">
-        <?php print $content['r_22_50_2']; ?>
-      </div>
-    <?php endif ?>
-  </div>
-
-  <div class="layout-wrapper">
-    <?php if (!empty($content['r_23_33_1'])): ?>
-      <div class="col col4">
-        <?php print $content['r_23_33_1']; ?>
-      </div>
-    <?php endif ?>
-    <div class="col8 right">
-      <?php if (!empty($content['r_23_33_2'])): ?>
-        <div class="col6">
-          <?php print $content['r_23_33_2']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_23_33_3'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_23_33_3']; ?>
-        </div>
-      <?php endif ?>
-    </div>
-  </div>
-
-  <div class="layout-wrapper">
-    <div class="col6">
-      <?php if (!empty($content['r_24_25_1'])): ?>
-        <div class="col col6">
-          <?php print $content['r_24_25_1']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_24_25_2'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_24_25_2']; ?>
-        </div>
-      <?php endif ?>
-    </div>
-
-    <div class="col6 right">
-      <?php if (!empty($content['r_24_25_3'])): ?>
-        <div class="col col6">
-          <?php print $content['r_24_25_3']; ?>
-        </div>
-      <?php endif ?>
-
-      <?php if (!empty($content['r_24_25_4'])): ?>
-        <div class="col col6 right">
-          <?php print $content['r_24_25_4']; ?>
-        </div>
-      <?php endif ?>
-    </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s6_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s6_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_11_025_4']; ?></div>
   </div>
 
 </div>
