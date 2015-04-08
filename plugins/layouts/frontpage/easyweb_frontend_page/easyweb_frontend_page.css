@@ -1,61 +1,59 @@
+.page-admin .col3,
+.page-admin .col4,
+.page-admin .col6,
+.page-admin .col8,
+.page-admin .col9 { 
+  float: left;
+}
+
+.page-admin .col12 {
+  clear: both;
+}
+
+.page-admin .panel-region {
+  margin: 10px;
+}
+
 .page-admin .col3 {
   width: 25%;
-  float: left;
 }
 
 .page-admin .col4 {
   width: 33.33333333%;
-  float: left;
 }
 
 .page-admin .col6 {
   width: 50%;
-  float: left;
-}
-
-.page-admin .col7 {
-  width: 58.33333333%;
-  float: left;
 }
 
 .page-admin .col8 {
   width: 66.66666667%;
-  float: left;
 }
 
 .page-admin .col9 {
   width: 75%;
-  float: left;
-}
-
-.page-admin .col8 .col6,
-.page-admin .col6 .col6 {
-  width: 50%;
-}
-
-.page-admin .col {
-  margin-bottom: 10px;
-}
-
-.page-admin .col .label {
-  padding-top: 5px;
-}
-
-.page-admin .layout-wrapper {
-  display: table;
-  width: 100%;
-}
-
-.page-admin .layout-wrapper > div {
-  display: table-cell;
-}
-
-.page-admin .layout-wrapper:before,
-.page-admin .layout-wrapper:after {
-  display: table;
-  content: " ";
 }
 
 .page-admin .form-actions {
   clear: both;
 }
+
+.ctools-modal-content .layout-wrapper,
+.ctools-modal-content .col3,
+.ctools-modal-content .col4,
+.ctools-modal-content .col6,
+.ctools-modal-content .col8,
+.ctools-modal-content .col9 {
+ margin: 0 !important;
+ padding: 0 !important;
+}
+
+.ctools-modal-content .col12 {
+  padding: 10px;
+}
+
+.ctools-modal-content .frontpage-layout {
+  display: inline-block;
+  width: 100%;
+}
+
