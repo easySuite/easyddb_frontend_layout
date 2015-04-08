@@ -1,8 +1,6 @@
 <div <?php if (!empty($css_id)) { print ' id="$css_id"'; } ?> class="frontpage-layout">
 
-  <div class="col12">
-    <div class="col12"><?php print $content['s1_r_01_100']; ?></div>
-  </div>
+  <div class="col12"><?php print $content['s1_r_01_100']; ?></div>
 
   <div class="col12">
     <div class="col3 left"><?php print $content['s1_r_02_025']; ?></div>
@@ -54,9 +52,7 @@
   </div>
 
   <div class="layout-wrapper">
-    <div class="col12">
-      <div class="col12"><?php print $content['s2_r_01_100']; ?></div>
-    </div>
+    <div class="col12"><?php print $content['s2_r_01_100']; ?></div>
 
     <div class="col12">
       <div class="col3 left"><?php print $content['s2_r_02_025']; ?></div>
@@ -107,9 +103,7 @@
       <div class="col3 right"><?php print $content['s2_r_11_025_4']; ?></div>
     </div>
 
-    <div class="col12">
-      <div class="col12"><?php print $content['s3_r_01_100']; ?></div>
-    </div>
+    <div class="col12"><?php print $content['s3_r_01_100']; ?></div>
 
     <div class="col12">
       <div class="col3 left"><?php print $content['s3_r_02_025']; ?></div>
@@ -161,9 +155,7 @@
     </div>
   </div>
 
-  <div class="col12">
-    <div class="col12"><?php print $content['s4_r_01_100']; ?></div>
-  </div>
+  <div class="col12"><?php print $content['s4_r_01_100']; ?></div>
 
   <div class="col12">
     <div class="col3 left"><?php print $content['s4_r_02_025']; ?></div>
@@ -215,9 +207,7 @@
   </div>
 
   <div class="layout-wrapper">
-    <div class="col12">
-      <div class="col12"><?php print $content['s5_r_01_100']; ?></div>
-    </div>
+    <div class="col12"><?php print $content['s5_r_01_100']; ?></div>
 
     <div class="col12">
       <div class="col3 left"><?php print $content['s5_r_02_025']; ?></div>
@@ -269,9 +259,7 @@
     </div>
   </div>
 
-  <div class="col12">
-    <div class="col12"><?php print $content['s6_r_01_100']; ?></div>
-  </div>
+  <div class="col12"><?php print $content['s6_r_01_100']; ?></div>
 
   <div class="col12">
     <div class="col3 left"><?php print $content['s6_r_02_025']; ?></div>
