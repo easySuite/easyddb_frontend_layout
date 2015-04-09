@@ -1,50 +1,313 @@
 <div <?php if (!empty($css_id)) { print ' id="$css_id"'; } ?> class="frontpage-layout">
 
-  <?php if (!empty($content['top'])): ?>
-    <div class="primary-content">
-      <?php print $content['top']; ?>
-    </div>
-  <?php endif ?>
+  <div class="col12"><?php print $content['s1_r_01_100']; ?></div>
 
-  <div class="layout-wrapper">
-    <?php if (!empty($content['top_left'])): ?>
-      <div class="tertiary-content-left">
-        <?php print $content['top_left']; ?>
-      </div>
-    <?php endif ?>
-
-    <?php if (!empty($content['top_right'])): ?>
-      <div class="secondary-content-right">
-        <?php print $content['top_right']; ?>
-      </div>
-    <?php endif ?>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s1_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s1_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s1_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s1_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s1_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s1_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s1_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s1_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_06_025']; ?></div>
   </div>
 
-  <?php if (!empty($content['middle'])): ?>
-    <div class="primary-content">
-      <?php print $content['middle']; ?>
-    </div>
-  <?php endif ?>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s1_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s1_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s1_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s1_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s1_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s1_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s1_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s1_r_10_050']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s1_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s1_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s1_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s1_r_11_025_4']; ?></div>
+  </div>
 
   <div class="layout-wrapper">
-    <?php if (!empty($content['bottom_medium_right'])): ?>
-      <div class="half-page-content">
-        <?php print $content['bottom_medium_right']; ?>
-      </div>
-    <?php endif ?>
-      <div class="inner-front-wrapper">
-      <?php if (!empty($content['bottom_left_small'])): ?>
-        <div class="quarter-content-left">
-          <?php print $content['bottom_left_small']; ?>
-        </div>
-      <?php endif ?>
+    <div class="col12"><?php print $content['s2_r_01_100']; ?></div>
 
-      <?php if (!empty($content['bottom_right_small'])): ?>
-        <div class="quarter-content">
-          <?php print $content['bottom_right_small']; ?>
-        </div>
-      <?php endif ?>
-	</div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s2_r_02_075']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s2_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s2_r_03_066']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s2_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s2_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s2_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s2_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s2_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_06_025']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s2_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s2_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s2_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s2_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s2_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s2_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s2_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s2_r_10_050']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s2_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s2_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s2_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s2_r_11_025_4']; ?></div>
+    </div>
+
+    <div class="col12"><?php print $content['s3_r_01_100']; ?></div>
+
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s3_r_02_075']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s3_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s3_r_03_066']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s3_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s3_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s3_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s3_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s3_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_06_025']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s3_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s3_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s3_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s3_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s3_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s3_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s3_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s3_r_10_050']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s3_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s3_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s3_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s3_r_11_025_4']; ?></div>
+    </div>
   </div>
- 
+
+  <div class="col12"><?php print $content['s4_r_01_100']; ?></div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s4_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s4_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s4_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s4_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s4_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s4_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s4_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s4_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_06_025']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s4_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s4_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s4_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s4_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s4_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s4_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s4_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s4_r_10_050']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s4_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s4_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s4_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s4_r_11_025_4']; ?></div>
+  </div>
+
+  <div class="layout-wrapper">
+    <div class="col12"><?php print $content['s5_r_01_100']; ?></div>
+
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_02_025']; ?></div>
+      <div class="col9 right"><?php print $content['s5_r_02_075']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s5_r_03_033']; ?></div>
+      <div class="col8 right"><?php print $content['s5_r_03_066']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s5_r_04_050_1']; ?></div>
+      <div class="col6 right"><?php print $content['s5_r_04_050_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col8 left"><?php print $content['s5_r_05_066']; ?></div>
+      <div class="col4 right"><?php print $content['s5_r_05_033']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col9 left"><?php print $content['s5_r_06_075']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_06_025']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col4 left"><?php print $content['s5_r_07_033_1']; ?></div>
+      <div class="col4 pre4"><?php print $content['s5_r_07_033_2']; ?></div>
+      <div class="col4 right"><?php print $content['s5_r_07_033_3']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col6 left"><?php print $content['s5_r_08_050']; ?></div>
+      <div class="col3 pre6"><?php print $content['s5_r_08_025_1']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_08_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_09_025_1']; ?></div>
+      <div class="col6 pre3"><?php print $content['s5_r_09_050']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_09_025_2']; ?></div>
+    </div>
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_10_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s5_r_10_025_2']; ?></div>
+      <div class="col6 right"><?php print $content['s5_r_10_050']; ?></div>
+    </div>
+
+    <div class="col12">
+      <div class="col3 left"><?php print $content['s5_r_11_025_1']; ?></div>
+      <div class="col3 pre3"><?php print $content['s5_r_11_025_2']; ?></div>
+      <div class="col3 pre6"><?php print $content['s5_r_11_025_3']; ?></div>
+      <div class="col3 right"><?php print $content['s5_r_11_025_4']; ?></div>
+    </div>
+  </div>
+
+  <div class="col12"><?php print $content['s6_r_01_100']; ?></div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_02_025']; ?></div>
+    <div class="col9 right"><?php print $content['s6_r_02_075']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s6_r_03_033']; ?></div>
+    <div class="col8 right"><?php print $content['s6_r_03_066']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s6_r_04_050_1']; ?></div>
+    <div class="col6 right"><?php print $content['s6_r_04_050_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col8 left"><?php print $content['s6_r_05_066']; ?></div>
+    <div class="col4 right"><?php print $content['s6_r_05_033']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col9 left"><?php print $content['s6_r_06_075']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_06_025']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col4 left"><?php print $content['s6_r_07_033_1']; ?></div>
+    <div class="col4 pre4"><?php print $content['s6_r_07_033_2']; ?></div>
+    <div class="col4 right"><?php print $content['s6_r_07_033_3']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col6 left"><?php print $content['s6_r_08_050']; ?></div>
+    <div class="col3 pre6"><?php print $content['s6_r_08_025_1']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_08_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_09_025_1']; ?></div>
+    <div class="col6 pre3"><?php print $content['s6_r_09_050']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_09_025_2']; ?></div>
+  </div>
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_10_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s6_r_10_025_2']; ?></div>
+    <div class="col6 right"><?php print $content['s6_r_10_050']; ?></div>
+  </div>
+
+  <div class="col12">
+    <div class="col3 left"><?php print $content['s6_r_11_025_1']; ?></div>
+    <div class="col3 pre3"><?php print $content['s6_r_11_025_2']; ?></div>
+    <div class="col3 pre6"><?php print $content['s6_r_11_025_3']; ?></div>
+    <div class="col3 right"><?php print $content['s6_r_11_025_4']; ?></div>
+  </div>
+
 </div>
