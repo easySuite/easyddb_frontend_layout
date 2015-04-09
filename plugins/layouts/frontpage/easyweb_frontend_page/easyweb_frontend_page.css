@@ -1,0 +1,59 @@
+.page-admin .col3,
+.page-admin .col4,
+.page-admin .col6,
+.page-admin .col8,
+.page-admin .col9 { 
+  float: left;
+}
+
+.page-admin .col12 {
+  clear: both;
+}
+
+.page-admin .panel-region {
+  margin: 10px;
+}
+
+.page-admin .col3 {
+  width: 25%;
+}
+
+.page-admin .col4 {
+  width: 33.33333333%;
+}
+
+.page-admin .col6 {
+  width: 50%;
+}
+
+.page-admin .col8 {
+  width: 66.66666667%;
+}
+
+.page-admin .col9 {
+  width: 75%;
+}
+
+.page-admin .form-actions {
+  clear: both;
+}
+
+.ctools-modal-content .layout-wrapper,
+.ctools-modal-content .col3,
+.ctools-modal-content .col4,
+.ctools-modal-content .col6,
+.ctools-modal-content .col8,
+.ctools-modal-content .col9 {
+ margin: 0 !important;
+ padding: 0 !important;
+}
+
+.ctools-modal-content .col12 {
+  padding: 10px;
+}
+
+.ctools-modal-content .frontpage-layout {
+  display: inline-block;
+  width: 100%;
+}
+
