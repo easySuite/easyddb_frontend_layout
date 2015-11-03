@@ -2,5 +2,5 @@ name = easyDDB frontend layout
 description = Defines frontend layout for easyDDB similar to easyWeb.
 package = easyDDB
 core = 7.x
-version = 7.x-2.0.0+easy
+version = 7.x-2.3.1+easy
 dependencies[] = panels
