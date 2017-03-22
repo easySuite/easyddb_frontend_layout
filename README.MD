@@ -1,1 +1,0 @@
-# easyddb_frontend_layout
