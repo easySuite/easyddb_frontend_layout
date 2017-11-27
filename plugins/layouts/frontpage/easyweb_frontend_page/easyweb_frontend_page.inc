@@ -1,8 +1,8 @@
 <?php
 
 $plugin['easyweb_frontend_page'] = array(
-  'title' => t('easyDDB default layout'),
-  'category'  => 'easyDDB',
+  'title' => t('easyOPAC default layout'),
+  'category'  => 'easyOPAC',
   'icon' => 'easyweb_frontend_page.png',
   'theme' => 'easyweb_frontend_page',
   'css' => 'easyweb_frontend_page.css',
