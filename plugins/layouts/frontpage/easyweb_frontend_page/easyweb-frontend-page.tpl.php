@@ -1,4 +1,4 @@
-<div <?php if (!empty($css_id)) { print ' id="$css_id"'; } ?> class="frontpage-layout">
+<div <?php if (!empty($css_id)) { print ' id="$css_id"'; } ?> class="frontpage-layout limit-width">
 
   <div class="col12">
     <div class="col12"><?php print $content['s1_r_01_100']; ?></div>
