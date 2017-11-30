@@ -93,6 +93,11 @@
   width: 75%;
 }
 
+.frontpage-layout.limit-width {
+  max-width: 1124px;
+  margin: 0 auto;
+}
+
 .right {
   float: right;
 }
