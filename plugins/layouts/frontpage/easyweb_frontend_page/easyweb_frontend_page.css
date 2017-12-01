@@ -29,26 +29,6 @@
   margin: 10px;
 }
 
-.page-admin .col3 {
-  width: 25%;
-}
-
-.page-admin .col4 {
-  width: 33.33333333%;
-}
-
-.page-admin .col6 {
-  width: 50%;
-}
-
-.page-admin .col8 {
-  width: 66.66666667%;
-}
-
-.page-admin .col9 {
-  width: 75%;
-}
-
 .page-admin .form-actions {
   clear: both;
 }
@@ -77,7 +57,8 @@
 .col6,
 .col8,
 .col9 {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .col12.clearfloat {
@@ -93,32 +74,37 @@
   margin: 10px;
 }
 
+.page-admin .col3,
 .col3 {
-  width: 25%;
+  width: 24.8%;
 }
 
+.page-admin .col4,
 .col4 {
-  width: 33.33333333%;
+  width: 33.2%;
 }
 
+.page-admin .col6,
 .col6 {
-  width: 50%;
+  width: 49.8%;
 }
 
+.page-admin .col8,
 .col8 {
-  width: 66.66666667%;
+  width: 66.5%;
 }
 
+.page-admin .col9,
 .col9 {
-  width: 75%;
+  width: 74.8%;
 }
 
 .right {
-  float: right;
+  clear: right;
 }
 
 .left {
-  float: left;
+  clear: left;
 }
 
 @media only screen and (max-width: 768px) {
