@@ -3,9 +3,14 @@
 }
 
 .content-wrapper .pane-content .frontpage-layout .panel-pane .panel-pane-inner {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 100% !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.frontpage-layout.limit-width {
+  max-width: 1124px;
+  margin: 0 auto;
 }
 
 .page-admin .col3,
@@ -75,8 +80,13 @@
   float: left;
 }
 
-.col12 {
+.col12.clearfloat {
   clear: both;
+}
+
+.col12.panel-pane {
+  max-width: 1124px;
+  margin: 0 auto;
 }
 
 .panel-region {
@@ -103,16 +113,11 @@
   width: 75%;
 }
 
-.frontpage-layout.limit-width {
-  max-width: 1124px;
-  margin: 0 auto;
-}
-
-.limit-width .right {
+.right {
   float: right;
 }
 
-.limit-width .left {
+.left {
   float: left;
 }
 
@@ -139,18 +144,9 @@
   .frontpage-layout .col6.pre3 {
     float: left;
     width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    _display: inline;
-    _overflow: hidden;
-    _overflow-y: visible;
-    clear: left;
   }
+}
+
+.footer {
+  clear: both;
 }
