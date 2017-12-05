@@ -136,3 +136,13 @@
 .footer {
   clear: both;
 }
+
+@media screen and (min-width: 600px) {
+  .footer-inner .panel-pane.panel-pane.pane-block.pane-block-1 {
+    width: 100%;
+  }
+
+  .footer-inner .panel-pane.panel-pane.pane-block.pane-block-1 .pane-title {
+    display: none;
+  }
+}
