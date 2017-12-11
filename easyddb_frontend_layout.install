@@ -10,6 +10,9 @@ function easyddb_frontend_layout_install() {
   easyddb_frontend_layout_migrate_colors();
 }
 
+/**
+ * Migrate colors from old theme.
+ */
 function easyddb_frontend_layout_update_7001() {
   easyddb_frontend_layout_migrate_colors();
 }
