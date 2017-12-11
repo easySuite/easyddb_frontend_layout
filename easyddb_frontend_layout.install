@@ -10,6 +10,10 @@ function easyddb_frontend_layout_install() {
   easyddb_frontend_layout_migrate_colors();
 }
 
+function easyddb_frontend_layout_update_7001() {
+  easyddb_frontend_layout_migrate_colors();
+}
+
 /**
  * Migrate of colors from old ddbasic.
  */
@@ -81,7 +85,7 @@ function color_update_palette($theme, $palette_changes) {
     $form_state['values']['palette'] = $palette;
     $form_state['values']['theme']   = $theme;
     $form_state['values']['info']    = color_get_info($theme);
-    $form_state['values']['scheme']  = '';
+    $form_state['values']['scheme']  = 'custom';
 
     color_scheme_form_submit(null, $form_state);
     drupal_set_message(t("Updated color palette"));
