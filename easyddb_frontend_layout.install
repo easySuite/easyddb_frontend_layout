@@ -18,6 +18,31 @@ function easyddb_frontend_layout_update_7001() {
 }
 
 /**
+ * Updating carousels which are linked to compact view mode.
+ */
+function easyddb_frontend_layout_update_7002() {
+  $query = db_select('panels_pane', 'pp')
+    ->fields('pp')
+    ->condition('type', 'serendipity_ting_object')
+    ->execute()
+    ->fetchAll();
+
+  foreach ($query as $pane) {
+    $configuration = unserialize($pane->configuration);
+    if ($configuration['view_mode'] == 'compact') {
+      $configuration['view_mode'] = 'teaser';
+
+      $pane->configuration = serialize($configuration);
+
+      db_update('panels_pane')
+        ->fields(array('configuration' => $pane->configuration))
+        ->condition('pid', $pane->pid, '=')
+        ->execute();
+    }
+  }
+}
+
+/**
  * Migrate of colors from old ddbasic.
  */
 function easyddb_frontend_layout_migrate_colors() {
