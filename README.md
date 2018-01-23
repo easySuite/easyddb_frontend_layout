@@ -1,4 +1,4 @@
-easyDDB frontend layout
+easyOPAC frontend layout
 ==========
 
 Module creates new layout for panels module.

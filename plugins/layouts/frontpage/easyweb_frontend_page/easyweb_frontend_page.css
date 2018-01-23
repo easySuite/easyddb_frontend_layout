@@ -1,8 +1,23 @@
+.content-wrapper .pane-content .frontpage-layout .col12 .panel-pane {
+  background: unset;
+}
+
+.content-wrapper .pane-content .frontpage-layout .panel-pane .panel-pane-inner {
+  width: 100% !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.frontpage-layout.limit-width {
+  max-width: 1124px;
+  margin: 0 auto;
+}
+
 .page-admin .col3,
 .page-admin .col4,
 .page-admin .col6,
 .page-admin .col8,
-.page-admin .col9 { 
+.page-admin .col9 {
   float: left;
 }
 
@@ -12,26 +27,6 @@
 
 .page-admin .panel-region {
   margin: 10px;
-}
-
-.page-admin .col3 {
-  width: 25%;
-}
-
-.page-admin .col4 {
-  width: 33.33333333%;
-}
-
-.page-admin .col6 {
-  width: 50%;
-}
-
-.page-admin .col8 {
-  width: 66.66666667%;
-}
-
-.page-admin .col9 {
-  width: 75%;
 }
 
 .page-admin .form-actions {
@@ -57,3 +52,97 @@
   width: 100%;
 }
 
+.col3,
+.col4,
+.col6,
+.col8,
+.col9 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col12.clearfloat {
+  clear: both;
+}
+
+.col12.panel-pane {
+  max-width: 1124px;
+  margin: 0 auto;
+}
+
+.panel-region {
+  margin: 10px;
+}
+
+.page-admin .col3,
+.col3 {
+  width: 24.7%;
+}
+
+.page-admin .col4,
+.col4 {
+  width: 33.1%;
+}
+
+.page-admin .col6,
+.col6 {
+  width: 49.8%;
+}
+
+.page-admin .col8,
+.col8 {
+  width: 66.5%;
+}
+
+.page-admin .col9,
+.col9 {
+  width: 74.8%;
+}
+
+.right {
+  clear: right;
+}
+
+.left {
+  clear: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .frontpage-layout .primary-content,
+  .frontpage-layout .secondary-content,
+  .frontpage-layout .tertiary-content,
+  .frontpage-layout .inner-front-wrapper,
+  .frontpage-layout .layout-wrapper,
+  .frontpage-layout .col12,
+  .frontpage-layout .col9,
+  .frontpage-layout .col9.right,
+  .frontpage-layout .col8,
+  .frontpage-layout .col8.right,
+  .frontpage-layout .col6,
+  .frontpage-layout .col6.right,
+  .frontpage-layout .col4,
+  .frontpage-layout .col4.right,
+  .frontpage-layout .col3,
+  .frontpage-layout .col3.right,
+  .frontpage-layout .col3.pre3,
+  .frontpage-layout .col3.pre6,
+  .frontpage-layout .col4.pre4,
+  .frontpage-layout .col6.pre3 {
+    float: left;
+    width: 100%;
+  }
+}
+
+.footer {
+  clear: both;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-inner .panel-pane.panel-pane.pane-block.pane-block-1 {
+    width: 100%;
+  }
+
+  .footer-inner .panel-pane.panel-pane.pane-block.pane-block-1 .pane-title {
+    display: none;
+  }
+}
