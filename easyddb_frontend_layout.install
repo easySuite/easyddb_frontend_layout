@@ -51,71 +51,111 @@ function easyddb_frontend_layout_migrate_colors() {
   if (!empty($old_theme_settings)) {
     variable_set('theme_ddbasic_settings_backup', $old_theme_settings);
 
-    $topbar_color = $old_theme_settings['palette']['topbar_background_color'];
-    $header_background_color = $old_theme_settings['palette']['header_background_color'];
-    $navigation_background_color = $old_theme_settings['palette']['navigation_background_color'];
-    $link_color = $old_theme_settings['palette']['link'];
+    $info = array(
+      // Available colors and color labels used in theme.
+      'fields' => array(
+        'base' => t('Base'),
+        'link' => t('Link'),
+        'primary' => t('Primary'),
+        'secondary' => t('Secondary'),
+        'text' => t('Text'),
+        'text_link' => t('Text link'),
+        'text_link_on_dark' => t('Text link on dark background'),
+        'text_on_primary' => t('Text on primary'),
+        'text_on_secondary' => t('Text on secondary'),
+        'topbar' => t('Topbar'),
+        'extended_search_pane' => t('Extended search pane'),
+      ),
+      // Pre-defined color schemes.
+      'schemes' => array(
+        'default' => array(
+          'title' => t('Default'),
+          'colors' => array(
+            'base' => '#ffffff',
+            'link' => '#ffffff',
 
-    $palette_changes = array(
-      'primary' => $navigation_background_color,
-      'secondary' => $link_color,
-      'topbar' => $topbar_color,
-      'extended_search_pane' => $header_background_color,
+            'primary' => '#4d898e',
+            'secondary' => '#f66d70',
+            'text' => '#262627',
+            'text_link' => '#4d898f',
+            'text_link_on_dark' => '#4d898d',
+            'text_on_primary' => '#fffff1',
+            'text_on_secondary' => '#fffff2',
+            'topbar' => '#f1f2f3',
+            'extended_search_pane' => '#262625',
+          ),
+        ),
+      ),
+
+      // Images to copy over.
+      'copy' => array(),
+
+      // CSS files (excluding @import) to rewrite with new color scheme.
+      'css' => array(),
+
+      // Gradient definitions.
+      'gradients' => array(),
+
+      // Color areas to fill (x, y, width, height).
+      'fill' => array(),
+
+      // Coordinates of all the theme slices (x, y, width, height)
+      // with their filename as used in the stylesheet.
+      'slices' => array(),
+
+      // Reference color used for blending. Matches the base.png's colors.
+      'blend_target' => '#ffffff',
+
+      // Preview files.
+      'preview_css' => 'color/preview.css',
+
+      // Base file for image generation.
+      'base_image' => 'color/base.png',
     );
 
-    color_update_palette('ddbasic', $palette_changes);
+
+    $palette = $info['schemes']['default']['colors'];
+
+    $palette['topbar'] = $old_theme_settings['palette']['topbar_background_color'];
+    $palette['extended_search_pane'] = $old_theme_settings['palette']['header_background_color'];
+    $palette['primary'] = $old_theme_settings['palette']['navigation_background_color'];
+    $palette['secondary'] = $old_theme_settings['palette']['link'];
+
+    $info['schemes']['default']['colors'] = $palette;
+    $old_theme_settings['palette'] = $palette;
+
+    $old_theme_settings['info'] = $info;
+
+    $theme_path = drupal_realpath(drupal_get_path('theme', 'ddbasic')) . '/';
+    $cssfiles = array_merge(
+      file_scan_directory($theme_path . '/sass_css', '/\.css$/')
+    );
+    $old_theme_settings['info']['css'] = array();
+    foreach ($cssfiles as $cssfile) {
+      $old_theme_settings['info']['css'][] = str_replace($theme_path, '', drupal_realpath($cssfile->uri));
+    }
+
+    variable_set('theme_ddbasic_settings', $old_theme_settings);
+    color_update_palette('ddbasic', $palette);
+
+    drupal_flush_all_caches();
   }
 }
 
 /**
- * Update selected colors in the specified theme's color palette without changing
- * the entire color scheme. A screen refresh is required to see the effect of any
- * palette changes.
+ * Update selected colors in the specified theme's color palette.
  *
- * The palette changes made by calling this function have the same effect as when an
- * admin user goes to the theme's Settings page and changes individual color selections.
- * Once this function has been called, the admin user is still free to go back and
- * change the affected colors via the theme's Settings page. Of course, if this function
- * is called after a user manually changes the selected colors, the manual changes
- * will be overwritten; thus, this function should typically only be called sparingly,
- * such as during a module install.
- *
- * To use this function, your theme must be enabled, it must use the Color module, and
- * the Color module itself (installed with Drupal core) must be enabled.
- *
- * Example:
- *     color_update_palette('my-theme-name', array(
- *       'headertop'    => '#2f2f2f',
- *       'headerbottom' => '#600b0b',
- *     ));
+ * Without changing the entire color scheme. A screen refresh is required
+ * to see the effect of any palette changes.
  */
-function color_update_palette($theme, $palette_changes) {
-  $palette = color_get_palette($theme);
+function color_update_palette($theme, $palette) {
+  $theme_settings = variable_get('theme_ddbasic_settings', array());
+  $form_state = array();
+  $form_state['values']['palette'] = $palette;
+  $form_state['values']['theme']   = $theme;
+  $form_state['values']['info']    = $theme_settings['info'];
+  $form_state['values']['scheme']  = 'custom';
 
-  $ok = TRUE;
-  foreach ($palette_changes as $key => $color) {
-    // Only accept hexadecimal CSS color strings. color_scheme_form_submit()
-    // also performs this validation, but since we're not supplying it with
-    // a real form, any error messages it generates probably wouldn't be
-    // displayed correctly.
-    if (preg_match('/^#([a-f0-9]{3}){1,2}$/iD', $color)) {
-      $palette[$key] = $color;
-    }
-    else {
-      drupal_set_message(t('%name must be a valid hexadecimal CSS color value.',
-        array('%name' => $key)), 'error');
-      $ok = FALSE;
-    }
-  }
-
-  if ($ok) {
-    $form_state = array();
-    $form_state['values']['palette'] = $palette;
-    $form_state['values']['theme']   = $theme;
-    $form_state['values']['info']    = color_get_info($theme);
-    $form_state['values']['scheme']  = 'custom';
-
-    color_scheme_form_submit(null, $form_state);
-    drupal_set_message(t("Updated color palette"));
-  }
+  color_scheme_form_submit(NULL, $form_state);
+  drupal_set_message(t("Updated color palette"));
 }
