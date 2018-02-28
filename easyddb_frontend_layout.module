@@ -1,8 +1,51 @@
 <?php
 
-/*
-* Implements hook_ctools_plugin_directory().
-*/
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
 function easyddb_frontend_layout_ctools_plugin_directory($module, $plugin) {
   return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form_state) {
+  if (isset($form_state['build_info']['args'][0]) && ($theme = $form_state['build_info']['args'][0]) && color_get_info($theme) && function_exists('gd_info')) {
+    $theme_backup = variable_get('theme_ddbasic_settings_backup', array());
+    if (!empty($theme_backup) && $theme == 'ddbasic') {
+
+      $fields = array(
+        'topbar' => 'topbar_background_color',
+        'extended_search_pane' => 'header_background_color',
+        'primary' => 'navigation_background_color',
+        'secondary' => 'link',
+      );
+
+      $colors = array();
+      foreach ($fields as $new => $old) {
+        $colors[$new] = $theme_backup['palette'][$old];
+      }
+
+      $form['color']['restore_colors'] = array(
+        '#prefix' => '<div style="margin-top: 25px">',
+        '#suffix' => '</div>',
+        '#type' => 'button',
+        '#name' => 'colors_revert',
+        '#value' => 'Revert colors',
+        '#attached' => array(
+          'js' => array(
+            array(
+              'data' => array('colors' => $colors),
+              'type' => 'setting',
+            ),
+            array(
+              'data' => drupal_get_path('module', 'easyddb_frontend_layout') . '/js/easyddb_frontend_layout.js',
+              'type' => 'file',
+            ),
+          ),
+        ),
+      );
+    }
+  }
 }
