@@ -6,6 +6,7 @@
       var colors = settings.colors;
       $('input[name="colors_revert"]').on('click', function(e) {
         e.preventDefault();
+        $('select[name="scheme"]').val('');
         if (colors !== undefined) {
           $.map(colors, function(v, k){
             $('input[name="palette[' + k +']"]').val(v);

@@ -22,9 +22,16 @@ function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form
         'secondary' => 'link',
       );
 
+      $theme_info = color_get_info('ddbasic');
+
       $colors = array();
       foreach ($fields as $new => $old) {
-        $colors[$new] = $theme_backup['palette'][$old];
+        if (!empty($theme_backup['palette'][$old])) {
+          $colors[$new] = $theme_backup['palette'][$old];
+        }
+        else {
+          $colors[$new] = $theme_info['schemes']['default']['colors'][$new];
+        }
       }
 
       $form['color']['restore_colors'] = array(
