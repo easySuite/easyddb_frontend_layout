@@ -132,7 +132,7 @@ function easyddb_frontend_layout_migrate_colors() {
     $cssfiles = array_merge(
       file_scan_directory($theme_path . '/sass_css', '/\.css$/')
     );
-    $old_theme_settings['info']['css'] = [];
+    $old_theme_settings['info']['css'] = array();
     foreach ($cssfiles as $cssfile) {
       $old_theme_settings['info']['css'][] = str_replace($theme_path, '', drupal_realpath($cssfile->uri));
     }
