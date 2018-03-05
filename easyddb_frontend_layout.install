@@ -116,10 +116,12 @@ function easyddb_frontend_layout_migrate_colors() {
 
     $palette = $info['schemes']['default']['colors'];
 
-    $palette['topbar'] = $old_theme_settings['palette']['topbar_background_color'];
-    $palette['extended_search_pane'] = $old_theme_settings['palette']['header_background_color'];
-    $palette['primary'] = $old_theme_settings['palette']['navigation_background_color'];
-    $palette['secondary'] = $old_theme_settings['palette']['link'];
+    if (!empty($old_theme_settings['palette'])) {
+      $palette['topbar'] = $old_theme_settings['palette']['topbar_background_color'];
+      $palette['extended_search_pane'] = $old_theme_settings['palette']['header_background_color'];
+      $palette['primary'] = $old_theme_settings['palette']['navigation_background_color'];
+      $palette['secondary'] = $old_theme_settings['palette']['link'];
+    }
 
     $info['schemes']['default']['colors'] = $palette;
     $old_theme_settings['palette'] = $palette;
