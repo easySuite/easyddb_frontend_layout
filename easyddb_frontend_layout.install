@@ -161,3 +161,25 @@ function color_update_palette($theme, $palette) {
   color_scheme_form_submit(NULL, $form_state);
   drupal_set_message(t("Updated color palette"));
 }
+
+/**
+ * Remove any access rules for carousels.
+ */
+function easyddb_frontend_layout_update_7003() {
+  $query = db_select('panels_pane', 'pp')
+    ->fields('pp', ['pid', 'access'])
+    ->condition('type', 'carousel')
+    ->condition('subtype', 'carousel')
+    ->execute()
+    ->fetchAll();
+
+  foreach ($query as $item) {
+    if (!empty($item->access)) {
+      $item->access = array();
+      db_update('panels_pane')
+        ->fields(['access' => serialize($item->access)])
+        ->condition('pid', $item->pid)
+        ->execute();
+    }
+  }
+}
