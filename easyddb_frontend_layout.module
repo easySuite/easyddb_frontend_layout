@@ -56,3 +56,14 @@ function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form
     }
   }
 }
+
+/**
+ * Implements hook_preprocess().
+ *
+ * Hide "Email Format" information provided by "Mimemail" from displaying on frontend.
+ */
+function easyddb_frontend_layout_preprocess(&$variables, $hook) {
+  if ($hook == 'user_profile') {
+    unset($variables['user_profile']['mimemail']);
+  }
+}
