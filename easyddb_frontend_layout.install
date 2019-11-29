@@ -241,19 +241,19 @@ function easyddb_frontend_layout_update_7005() {
             ->execute();
         }
       }
-
-      // Remove 'rooms' fields.
-      field_delete_instance($rooms_field_instance, TRUE);
-      field_delete_field($rooms_field_name);
-      field_cron();
-
-      // Remove 'rooms' taxonomy vocabulary.
-      $rooms_vocabulary = taxonomy_vocabulary_machine_name_load('rooms');
-      taxonomy_vocabulary_delete($rooms_vocabulary->vid);
-
-      // Disable and uninstall ding_event_rooms module.
-      module_disable(['ding_event_rooms']);
-      drupal_uninstall_modules(['ding_event_rooms']);
     }
+
+    // Remove 'rooms' fields.
+    field_delete_instance($rooms_field_instance, TRUE);
+    field_delete_field($rooms_field_name);
+    field_cron();
+
+    // Remove 'rooms' taxonomy vocabulary.
+    $rooms_vocabulary = taxonomy_vocabulary_machine_name_load('rooms');
+    taxonomy_vocabulary_delete($rooms_vocabulary->vid);
+
+    // Disable and uninstall ding_event_rooms module.
+    module_disable(['ding_event_rooms']);
+    drupal_uninstall_modules(['ding_event_rooms']);
   }
 }
