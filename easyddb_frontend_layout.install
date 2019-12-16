@@ -203,15 +203,21 @@ function easyddb_frontend_layout_update_7005() {
 
   if ($rooms_field_instance) {
     // Fetch nids which have 'rooms' field relation.
-    $entities = db_select('field_data_field_ding_event_rooms', 'rooms')
+    $rooms = db_select('field_data_field_ding_event_rooms', 'rooms')
       ->fields('rooms')
       ->execute()
       ->fetchAll();
 
-    if ($entities) {
+    // Check if "places" field is not empty.
+    $places = db_select('field_data_field_ding_event_place', 'places')
+      ->fields('places')
+      ->execute()
+      ->fetchAll();
+
+    if ($rooms && !$places) {
       // Collect all 'rooms' vocabulary tids used in ding_event node CT.
       $tids = [];
-      foreach ($entities as $item) {
+      foreach ($rooms as $item) {
         $tids[$item->field_ding_event_rooms_tid] = $item->field_ding_event_rooms_tid;
       }
 
@@ -224,7 +230,7 @@ function easyddb_frontend_layout_update_7005() {
         'field_revision_field_ding_event_place',
       ];
 
-      foreach ($entities as $entity) {
+      foreach ($rooms as $entity) {
         foreach ($tables as $table) {
           db_insert($table)
             ->fields([
@@ -239,6 +245,40 @@ function easyddb_frontend_layout_update_7005() {
               'field_ding_event_place_format' => NULL,
             ])
             ->execute();
+        }
+      }
+    }
+    elseif ($rooms && $places) {
+      $places_array = [];
+      foreach ($places as $place) {
+        $places_array[] = $place->entity_id;
+      }
+
+      foreach ($rooms as $entity) {
+        if (!in_array($entity->entity_id, $places_array)) {
+          $term = taxonomy_term_load($entity->field_ding_event_rooms_tid);
+
+          // Insert data into 'place' field.
+          $tables = [
+            'field_data_field_ding_event_place',
+            'field_revision_field_ding_event_place',
+          ];
+
+          foreach ($tables as $table) {
+            db_insert($table)
+              ->fields([
+                'entity_type' => $entity->entity_type,
+                'bundle' => $entity->bundle,
+                'deleted' => $entity->deleted,
+                'entity_id' => $entity->entity_id,
+                'revision_id' => $entity->revision_id,
+                'language' => $entity->language,
+                'delta' => $entity->delta,
+                'field_ding_event_place_value' => $term->name,
+                'field_ding_event_place_format' => NULL,
+              ])
+              ->execute();
+          }
         }
       }
     }
