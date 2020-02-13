@@ -297,3 +297,12 @@ function easyddb_frontend_layout_update_7005() {
     drupal_uninstall_modules(['ding_event_rooms']);
   }
 }
+
+/**
+ * Update current filter list of default items.
+ */
+function easyddb_frontend_layout_update_7006(&$sandbox) {
+  variable_del('ding_ipe_filter_panes_selected');
+  $selections = _ding_ipe_filter_selected_panes();
+  variable_set('ding_ipe_filter_panes_selected', $selections);
+}
