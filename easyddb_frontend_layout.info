@@ -2,5 +2,5 @@ name = easyOPAC frontend layout
 description = Defines frontend layout for easyOPAC similar to easyWeb.
 package = easyOPAC
 core = 7.x
-version = 7.x-5.0.1
+version = 7.x-5.0.2
 dependencies[] = panels
