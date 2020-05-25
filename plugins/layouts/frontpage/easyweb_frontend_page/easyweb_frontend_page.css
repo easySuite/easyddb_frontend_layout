@@ -33,7 +33,6 @@
   clear: both;
 }
 
-.ctools-modal-content .layout-wrapper,
 .ctools-modal-content .col3,
 .ctools-modal-content .col4,
 .ctools-modal-content .col6,
@@ -112,7 +111,6 @@
   .frontpage-layout .secondary-content,
   .frontpage-layout .tertiary-content,
   .frontpage-layout .inner-front-wrapper,
-  .frontpage-layout .layout-wrapper,
   .frontpage-layout .col12,
   .frontpage-layout .col9,
   .frontpage-layout .col9.right,
