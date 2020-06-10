@@ -310,7 +310,7 @@ function easyddb_frontend_layout_update_7006(&$sandbox) {
 /**
  * Cleanup nodelist templates table.
  */
-function ding_nodelist_update_7007() {
+function easyddb_frontend_layout_update_7007() {
   // Check ding_blog enabled;
   $blog_enabled = FALSE;
   if (module_exists('ding_blog')) {
