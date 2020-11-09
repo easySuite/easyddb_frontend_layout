@@ -353,3 +353,10 @@ function easyddb_frontend_layout_update_7007() {
     ->condition('widget', '')
     ->execute();
 }
+
+/**
+ * Unlock locked in 3.x version ding_ting_frontend field_group component.
+ */
+function easyddb_frontend_layout_update_7008() {
+  features_feature_unlock('ding_ting_frontend', 'field_group');
+}
