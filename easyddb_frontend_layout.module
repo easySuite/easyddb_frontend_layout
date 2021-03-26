@@ -12,19 +12,19 @@ function easyddb_frontend_layout_ctools_plugin_directory($module, $plugin) {
  */
 function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form_state) {
   if (isset($form_state['build_info']['args'][0]) && ($theme = $form_state['build_info']['args'][0]) && color_get_info($theme) && function_exists('gd_info')) {
-    $theme_backup = variable_get('theme_ddbasic_settings_backup', array());
+    $theme_backup = variable_get('theme_ddbasic_settings_backup', []);
     if (!empty($theme_backup) && $theme == 'ddbasic') {
 
-      $fields = array(
+      $fields = [
         'topbar' => 'topbar_background_color',
         'extended_search_pane' => 'header_background_color',
         'primary' => 'navigation_background_color',
         'secondary' => 'link',
-      );
+      ];
 
       $theme_info = color_get_info('ddbasic');
 
-      $colors = array();
+      $colors = [];
       foreach ($fields as $new => $old) {
         if (!empty($theme_backup['palette'][$old])) {
           $colors[$new] = $theme_backup['palette'][$old];
@@ -34,25 +34,25 @@ function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form
         }
       }
 
-      $form['color']['restore_colors'] = array(
+      $form['color']['restore_colors'] = [
         '#prefix' => '<div style="margin-top: 25px">',
         '#suffix' => '</div>',
         '#type' => 'button',
         '#name' => 'colors_revert',
         '#value' => 'Revert colors',
-        '#attached' => array(
-          'js' => array(
-            array(
-              'data' => array('colors' => $colors),
+        '#attached' => [
+          'js' => [
+            [
+              'data' => ['colors' => $colors],
               'type' => 'setting',
-            ),
-            array(
+            ],
+            [
               'data' => drupal_get_path('module', 'easyddb_frontend_layout') . '/js/easyddb_frontend_layout.js',
               'type' => 'file',
-            ),
-          ),
-        ),
-      );
+            ],
+          ],
+        ],
+      ];
     }
   }
 }
@@ -60,10 +60,176 @@ function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form
 /**
  * Implements hook_preprocess().
  *
- * Hide "Email Format" information provided by "Mimemail" from displaying on frontend.
+ * Hide "Email Format" information provided by "Mimemail" from displaying on
+ * frontend.
  */
 function easyddb_frontend_layout_preprocess(&$variables, $hook) {
   if ($hook == 'user_profile') {
     unset($variables['user_profile']['mimemail']);
   }
+}
+
+/**
+ * Implements hook_image_styles_alter().
+ */
+function easyddb_frontend_layout_image_styles_alter(&$styles) {
+  $styles['ting_cover_large'] = [
+    'name' => 'ting_cover_large',
+    'label' => 'Ting cover large',
+    'effects' => [
+      7 => [
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => [
+          'width' => 500,
+          'height' => '',
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'ting_cover_large',
+        ],
+        'weight' => 0,
+      ],
+      8 => [
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => [
+          'width' => 500,
+          'height' => '',
+          'upscale' => 1,
+        ],
+        'weight' => 2,
+      ],
+    ],
+  ];
+
+  $styles['ting_cover_medium'] = [
+    'name' => 'ting_cover_medium',
+    'label' => 'Ting cover medium',
+    'effects' => [
+      5 => [
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => [
+          'width' => 260,
+          'height' => '',
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'ting_cover_medium',
+        ],
+        'weight' => 0,
+      ],
+      6 => [
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => [
+          'width' => 260,
+          'height' => '',
+          'upscale' => 1,
+        ],
+        'weight' => 2,
+      ],
+    ],
+  ];
+
+  $styles['ting_cover_small'] = [
+    'name' => 'ting_cover_small',
+    'label' => 'Ting cover small',
+    'effects' => [
+      3 => [
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => [
+          'width' => 180,
+          'height' => '',
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'ting_cover_small',
+        ],
+        'weight' => 0,
+      ],
+      4 => [
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => [
+          'width' => 180,
+          'height' => '',
+          'upscale' => 1,
+        ],
+        'weight' => 2,
+      ],
+    ],
+  ];
+
+  $styles['ting_cover_mini'] = [
+    'name' => 'ting_cover_mini',
+    'label' => 'Ting cover mini',
+    'effects' => [
+      1 => [
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => [
+          'width' => 100,
+          'height' => '',
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'ting_cover_mini',
+        ],
+        'weight' => 0,
+      ],
+      2 => [
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => [
+          'width' => 100,
+          'height' => '',
+          'upscale' => 1,
+        ],
+        'weight' => 2,
+      ],
+    ],
+  ];
 }
