@@ -360,3 +360,48 @@ function easyddb_frontend_layout_update_7007() {
 function easyddb_frontend_layout_update_7008() {
   features_feature_unlock('ding_ting_frontend', 'field_group');
 }
+
+/**
+ * Update image field instances for re-use core image styles.
+ */
+function easyddb_frontend_layout_update_7009() {
+  // Update ting_cover instance.
+  $instance = field_info_instance('ting_object', 'ting_cover', 'ting_object');
+
+  $changes_list = [
+    'collection_list' => 'ding_list_medium',
+    'collection_primary' => 'ding_primary_large',
+    'default' => 'ding_primary_large',
+    'reference_teaser' => 'ding_list_medium',
+    'search_result' => 'ding_list_medium',
+    'teaser' => 'ding_list_medium',
+    'ting_reference_preview' => 'ding_list_medium',
+    'user_list' => 'ding_list_medium',
+  ];
+
+  foreach ($changes_list as $display => $style) {
+    $instance['display'][$display]['settings']['image_style'] = $style;
+  }
+
+  field_update_instance($instance);
+
+  // Update image field instances of CT's used in editorial search.
+  $content_types_changes = [
+    'node' => [
+      'ding_event' => 'field_ding_event_list_image',
+      'ding_news' => 'field_ding_news_list_image',
+      'ding_page' => 'field_ding_page_list_image',
+    ],
+    'profile2' => [
+      'ding_staff_profile' => 'field_ding_staff_image',
+    ],
+  ];
+
+  foreach ($content_types_changes as $bundle => $types) {
+    foreach ($types as $type => $field) {
+      $instance = field_info_instance($bundle, $field, $type);
+      $instance['display']['search_result']['settings']['image_style'] = 'ding_list_small';
+      field_update_instance($instance);
+    }
+  }
+}
