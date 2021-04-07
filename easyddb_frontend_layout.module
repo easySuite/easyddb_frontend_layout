@@ -1,6 +1,13 @@
 <?php
 
 /**
+ * @file
+ * easyOPAC frontend layout module.
+ */
+
+include_once 'easyddb_frontend_layout.features.inc';
+
+/**
  * Implements hook_ctools_plugin_directory().
  */
 function easyddb_frontend_layout_ctools_plugin_directory($module, $plugin) {
