@@ -240,3 +240,22 @@ function easyddb_frontend_layout_image_styles_alter(&$styles) {
     ],
   ];
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function easyddb_frontend_layout_form_og_admin_menu_overview_form_alter(&$form, &$form_state, $form_id) {
+  // Allow translation of description text on `/admin/structure/og_menu` page.
+  $form['update_defaults_overview']['#markup'] = '<p>' . t('These actions will remove and replace the default OG Menu links defined in the !settings_link.', ['!settings_link' => l(t('OG Menu Settings'), 'admin/config/group/og_menu/default-links')]) . '</p>';
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function easyddb_frontend_layout_module_implements_alter(&$implementations, $hook) {
+  if (($hook == 'form_og_admin_menu_overview_form_alter' || $hook == 'form_alter') && isset($implementations['easyddb_frontend_layout'])) {
+    $group = $implementations['easyddb_frontend_layout'];
+    unset($implementations['easyddb_frontend_layout']);
+    $implementations['easyddb_frontend_layout'] = $group;
+  }
+}
