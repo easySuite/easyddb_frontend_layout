@@ -259,3 +259,36 @@ function easyddb_frontend_layout_module_implements_alter(&$implementations, $hoo
     $implementations['easyddb_frontend_layout'] = $group;
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function easyddb_frontend_layout_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'ding_news_node_form') {
+    $paragraphs = $form['field_ding_news_paragraphs'][LANGUAGE_NONE]['add_more']['type']['#options'];
+
+    // @TODO: It is wrong to pass variables into `t()` function.
+    foreach ($paragraphs as $key => $paragraph_type) {
+      $form['field_ding_news_paragraphs'][LANGUAGE_NONE]['add_more']['type']['#options'][$key] = t($paragraph_type);
+    }
+  }
+
+  if ($form_id == 'eu_cookie_compliance_admin_form') {
+    $options = [
+      'bottom' => t('Bottom'),
+      'top' => t('Top'),
+    ];
+
+    $form['appearance']['eu_cookie_compliance']['popup_position']['#options'] = $options;
+  }
+
+  if ($form_id == 'taxonomy_overview_vocabularies') {
+    // @TODO: It is wrong to pass variables into `t()` function.
+    foreach (element_children($form) as $key) {
+      if (isset($form[$key]['name'])) {
+        $vocabulary = &$form[$key];
+        $form[$key]['name']['#markup'] = t($vocabulary['name']['#markup']);
+      }
+    }
+  }
+}
