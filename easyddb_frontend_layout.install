@@ -385,3 +385,10 @@ function easyddb_frontend_layout_update_7009() {
     }
   }
 }
+
+/**
+ * Enable internationalization modules for better localization.
+ */
+function easyddb_frontend_layout_update_7010() {
+  module_enable(['i18n_menu', 'i18n_contact', 'i18n_taxonomy']);
+}
