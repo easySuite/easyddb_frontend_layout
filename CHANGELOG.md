@@ -1,5 +1,8 @@
 ## Change Log
 
+### 7.x-6.3.3 (03/09-2021)
+- [#30](https://github.com/easySuite/easyddb_frontend_layout/pull/30) EASYOPAC-1357 - Allow change of logo URL to other sites. (@bozeak)
+
 ### 7.x-6.2.1 (10/06-2021)
 - [#29](https://github.com/easySuite/easyddb_frontend_layout/pull/29) EASYOPAC-1296 - Enable i18n modules for better localization. (@bozeak)
 - [#28](https://github.com/easySuite/easyddb_frontend_layout/pull/28) EASYOPAC-1296 - Translate static text on Organic Group Menus. (@bozeak)
