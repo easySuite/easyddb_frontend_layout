@@ -62,6 +62,46 @@ function easyddb_frontend_layout_form_system_theme_settings_alter(&$form, &$form
       ];
     }
   }
+
+  // Custom link on logo image.
+  $form['logo']['custom_url_on_logo'] = [
+    '#type' => 'textfield',
+    '#title' => t('Custom URL on logo'),
+    '#description' => t('URL to which the logo image will be linked. Ex: https://example.com.'),
+    '#default_value' => variable_get('easyddb_frontend_layout_custom_url_on_logo', ''),
+  ];
+
+  $form['#validate'][] = 'easyddb_frontend_layout_custom_url_on_logo_validate';
+  $form['#submit'][] = 'easyddb_frontend_layout_custom_url_on_logo_submit';
+}
+
+/**
+ * Custom logo URL field form submit callback.
+ */
+function easyddb_frontend_layout_custom_url_on_logo_submit($form, &$form_state) {
+  if (isset($form_state['values']['custom_url_on_logo'])) {
+    variable_set('easyddb_frontend_layout_custom_url_on_logo', $form_state['values']['custom_url_on_logo']);
+  }
+}
+
+/**
+ * Custom logo URL field validation handler.
+ */
+function easyddb_frontend_layout_custom_url_on_logo_validate($form, &$form_state) {
+  if (!empty($form_state['values']['custom_url_on_logo'])) {
+    if (!valid_url($form_state['values']['custom_url_on_logo'], TRUE)) {
+      form_set_error('custom_url_on_logo', t('Custom logo URL is not valid.'));
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function easyddb_frontend_layout_preprocess_pane_header(&$variables) {
+  if (!empty(variable_get('easyddb_frontend_layout_custom_url_on_logo', ''))) {
+    $variables['front_page'] = variable_get('easyddb_frontend_layout_custom_url_on_logo', '');
+  }
 }
 
 /**
