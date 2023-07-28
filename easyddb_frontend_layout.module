@@ -304,7 +304,6 @@ function easyddb_frontend_layout_module_implements_alter(&$implementations, $hoo
  * Implements hook_form_alter().
  */
 function easyddb_frontend_layout_form_alter(&$form, &$form_state, $form_id) {
-  global $user;
   if ($form_id == 'ding_news_node_form') {
     $paragraphs = $form['field_ding_news_paragraphs'][LANGUAGE_NONE]['add_more']['type']['#options'];
 
@@ -333,7 +332,7 @@ function easyddb_frontend_layout_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
-  if ($user->uid && in_array($form_id, ['contact_site_form', 'contact_personal_form'])) {
-    $form['mail']['#type'] = 'value';
+  if (in_array($form_id, ['contact_site_form', 'contact_personal_form'])) {
+    $form['mail']['#default_value'] = '';
   }
 }
