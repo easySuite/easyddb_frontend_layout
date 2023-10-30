@@ -331,4 +331,8 @@ function easyddb_frontend_layout_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+
+  if (in_array($form_id, ['contact_site_form', 'contact_personal_form'])) {
+    $form['mail']['#default_value'] = '';
+  }
 }
